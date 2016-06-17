@@ -4,7 +4,7 @@
 - Install [Vundle](https://github.com/VundleVim/Vundle.vim)  
 
 ## Setup
-1. Clone the repo  
+- Clone the repo  
 `git clone https://github.com/bboykov/vimconf.git ~/vimconf`  
 
 - add in your [main vimrc](http://vim.wikia.com/wiki/Open_vimrc_file) configuration.  
