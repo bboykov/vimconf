@@ -1,6 +1,4 @@
-" colorscheme  and font
-"colorscheme desert
-set guifont=Consolas:h12:cANSI
+" colorscheme  
 colorscheme molokai
 
 " Column 80 marker

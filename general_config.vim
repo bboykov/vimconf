@@ -65,6 +65,17 @@ set tm=500
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
+" Setup Font
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h14:cANSI
+  endif
+endif
+
 
 " Except for Makefiles: Hard tabs of width 2
 autocmd FileType make set ts=2
