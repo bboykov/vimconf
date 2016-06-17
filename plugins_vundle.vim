@@ -16,6 +16,9 @@ endif
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Color theme molokai
+Plugin 'tomasr/molokai'
+
 " The NERD tree allows you to explore your filesystem and to open files and directories.
 Plugin 'scrooloose/nerdtree'
 
@@ -25,13 +28,18 @@ Plugin 'tpope/vim-fugitive'
 " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree. 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
-" lean & mean status/tabline for vim that's light as air
+" Lean & mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" Color theme molokai
-Plugin 'tomasr/molokai'
+" Syntax checking hacks for vim 
+Plugin 'scrooloose/syntastic'
+
+" parentheses, brackets, quotes, XML tags, and more
+Plugin 'tpope/vim-surround'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
