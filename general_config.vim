@@ -4,6 +4,11 @@
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
+" Use Unix as the standard file type
+set fileformats=unix,dos,mac
+set fileformat=unix " Default format. Necessary under Windows!
+
+
 " Enable syntax highlighting
 syntax enable
 
@@ -60,9 +65,6 @@ set tm=500
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
 
 " Except for Makefiles: Hard tabs of width 2
 autocmd FileType make set ts=2
@@ -73,9 +75,6 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.cql set filetype=cql
 " And Java
 autocmd FileType java set sw=2
-
-" Default to Unix LF line endings
-set ffs=unix
 
 " Folding
 set foldmethod=syntax
