@@ -2,15 +2,17 @@
 My vim configuration files
 
 # Prerequisites
-[Vundle](https://github.com/VundleVim/Vundle.vim)
+- Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 
 # Setup
-- Download the vimrc file from git  
-`wget https://github.com/bboykov/vimfiles/blob/master/vimrc_bboykov`
-or  
-`curl -O https://raw.githubusercontent.com/bboykov/vimfiles/master/vimrc_bboykov`
-- Source the file in your vimrc configuration. Example:
-`source ~/vimfiles/vimrc_bboykov`
+- Clone the repo  
+`git clone https://github.com/bboykov/vimconf.git ~/vimconf`
+
+- Source the file in your vimrc configuration.
+Windows main vimrc:
+Linux main vimrc:
+`source ~/vimconf/*`  
+
 - Install plugins with vundle
 Launch `vim` and run `:PluginInstall`
 
