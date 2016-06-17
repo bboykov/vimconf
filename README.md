@@ -1,10 +1,9 @@
-# vimfiles
-My vim configuration files
+# My vim configuration files 
 
-# Prerequisites
+## Prerequisites
 - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 
-# Setup
+## Setup
 - Clone the repo  
 `git clone https://github.com/bboykov/vimconf.git ~/vimconf`
 

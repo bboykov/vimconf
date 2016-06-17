@@ -13,6 +13,9 @@ Plugin 'VundleVim/Vundle.vim'
 " The NERD tree allows you to explore your filesystem and to open files and directories.
 Plugin 'scrooloose/nerdtree'
 
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+
 " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree. 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
