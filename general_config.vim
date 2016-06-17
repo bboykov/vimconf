@@ -1,14 +1,8 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" settings
 
 " Behave like mswin
 source $VIMRUNTIME/mswin.vim
 behave mswin
-
-" Automatically change the current directory
-" http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
-autocmd BufEnter * silent! lcd %:p:h
-
 
 " Enable syntax highlighting
 syntax enable
@@ -94,44 +88,8 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
-" VUNDLE
-" set the runtime path to include Vundle and initialize
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$USERPROFILE/vimfiles/bundle/')
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-" The NERD tree allows you to explore your filesystem and to open files and directories.
-Plugin 'scrooloose/nerdtree'
-" A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree. 
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-" lean & mean status/tabline for vim that's light as air
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" Color theme molokai
-Plugin 'tomasr/molokai'
+" Automatically change the current directory
+" http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+autocmd BufEnter * silent! lcd %:p:h
 
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-"
-"
-"
-" colorscheme  and font
-"colorscheme desert
-"set guifont=DejaVu\ Sans\ Mono\ 12
-colorscheme molokai
-
-" Column 80 marker
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#660000
-match OverLength /\%81v.\+/
-
-" NERDTree settings
-" start vim with NERDTree open
-"autocmd vimenter * NERDTree
-
-" give a shortcut key to NERD Tree
-map <F2> :NERDTreeToggle<CR>

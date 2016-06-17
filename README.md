@@ -8,10 +8,8 @@ My vim configuration files
 - Clone the repo  
 `git clone https://github.com/bboykov/vimconf.git ~/vimconf`
 
-- Source the file in your vimrc configuration.
-Windows main vimrc:
-Linux main vimrc:
-`source ~/vimconf/*`  
+- add in your [main vimrc](http://vim.wikia.com/wiki/Open_vimrc_file) configuration.
+`source ~/vimconf/main.vim`  
 
 - Install plugins with vundle
 Launch `vim` and run `:PluginInstall`
