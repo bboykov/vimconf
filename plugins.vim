@@ -37,6 +37,12 @@ Plugin 'scrooloose/syntastic'
 
 " parentheses, brackets, quotes, XML tags, and more
 Plugin 'tpope/vim-surround'
+" Ansible-lint (from the repo @System on Fedora)
+" https://github.com/willthames/ansible-lint
+
+" A vim plugin for syntax highlighting Ansible's common filetypes
+Plugin 'pearofducks/ansible-vim'
+
 
 
 " All of your Plugins must be added before the following line
