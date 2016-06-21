@@ -75,8 +75,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" let g:syntastic_c_checkers=['make','splint']
 " Bash 
-" Install with `pip install bashate`
-"let g:syntastic_sh_checkers=['sh','bashate'] 
+" Install checkers:with 
+" pip install bashate
+" yum install ShellCheck
+let g:syntastic_sh_checkers=['shellcheck','sh','bashate'] 
 
