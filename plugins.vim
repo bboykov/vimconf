@@ -78,6 +78,6 @@ let g:syntastic_check_on_wq = 0
 " Bash 
 " Install checkers:with 
 " pip install bashate
-" yum install ShellCheck
+" Fedora: yum install ShellCheck 
 let g:syntastic_sh_checkers=['shellcheck','sh','bashate'] 
 
