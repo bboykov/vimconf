@@ -43,7 +43,8 @@ Plugin 'tpope/vim-surround'
 " A vim plugin for syntax highlighting Ansible's common filetypes
 Plugin 'pearofducks/ansible-vim'
 
-
+" Maximizes and restores the current window in Vim.
+Plugin 'szw/vim-maximizer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
