@@ -8,6 +8,8 @@ behave mswin
 set fileformats=unix,dos,mac
 set fileformat=unix " Default format. Necessary under Windows!
 
+" start gVim maximized
+set lines=999 columns=999
 
 " Enable syntax highlighting
 syntax enable
