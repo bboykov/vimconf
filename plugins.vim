@@ -46,6 +46,9 @@ Plugin 'pearofducks/ansible-vim'
 " Maximizes and restores the current window in Vim.
 Plugin 'szw/vim-maximizer'
 
+" Comment stuff out.
+Plugin 'tpope/vim-commentary'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
