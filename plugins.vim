@@ -85,3 +85,5 @@ let g:syntastic_check_on_wq = 0
 " Fedora: yum install ShellCheck 
 let g:syntastic_sh_checkers=['shellcheck','sh','bashate'] 
 
+
+
