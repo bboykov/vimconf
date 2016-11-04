@@ -21,6 +21,3 @@ Follow [Vundle for Windows](https://github.com/VundleVim/Vundle.vim/wiki/Vundle-
 Launch `vim` and run `:PluginInstall`  
 To install from command line: `vim +PluginInstall +qall`  
 
-
-
-
