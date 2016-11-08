@@ -52,6 +52,9 @@ Plugin 'tpope/vim-commentary'
 " Vimwiki
 Plugin 'vimwiki/vimwiki'
 
+" Snippets
+Plugin 'honza/vim-snippets'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
