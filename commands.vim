@@ -19,5 +19,5 @@ nnoremap <C-H> <C-W><C-H>
 
 " More natural split opening
 set splitbelow
-set splitright
+"set splitright
 

@@ -52,6 +52,14 @@ Plugin 'tpope/vim-commentary'
 " Vimwiki
 Plugin 'vimwiki/vimwiki'
 
+" The vim-notes plug-in makes it easy to manage your notes
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
+
+" Syntax highlighting, matching rules and mappings for the original Markdown
+" and extensions.
+Plugin 'plasticboy/vim-markdown'
+
 " Snippets
 Plugin 'honza/vim-snippets'
 
@@ -91,6 +99,5 @@ let g:syntastic_check_on_wq = 0
 " pip install bashate
 " Fedora: yum install ShellCheck 
 let g:syntastic_sh_checkers=['shellcheck','sh','bashate'] 
-
-
-
+" Ansible
+let g:syntastic_ansible_checkers=['ansible-lint']
