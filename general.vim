@@ -98,4 +98,7 @@ set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=20
 
+" Set spelling
+"set spell spelllang=en_us
+
 
