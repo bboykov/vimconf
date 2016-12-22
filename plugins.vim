@@ -101,3 +101,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_sh_checkers=['shellcheck','sh','bashate'] 
 " Ansible
 let g:syntastic_ansible_checkers=['ansible-lint']
+
+" vim-notes plugin
+let g:notes_directories = ['~/Dropbox/vim-notes']
