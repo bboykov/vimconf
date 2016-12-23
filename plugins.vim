@@ -104,3 +104,7 @@ let g:syntastic_ansible_checkers=['ansible-lint']
 
 " vim-notes plugin
 let g:notes_directories = ['~/Dropbox/vim-notes']
+
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '$HOME/Dropbox/vim-wiki'}]
