@@ -67,10 +67,14 @@ set history=256
 " it has not been changed inside of Vim, automatically read it again.
 set autoread
 
-" Default to soft tabs, 2 spaces
+" Default tabs to 2 spaces
+" Ref and more settings here: http://tedlogan.com/techblog3.html
+" softtabstop:      Fine tunes the amount of white space to be added
+" shiftwidth        Determines the amount of whitespace to add in normal mode
+" expandtab:        When on uses space instead of tabs
+set softtabstop =2
+set shiftwidth  =2
 set expandtab
-set sw=2
-set sts=2
 " Except for Makefiles: Hard tabs of width 2
 autocmd FileType make set ts=2
 " And Markdown
