@@ -107,4 +107,7 @@ let g:notes_directories = ['~/Dropbox/vim-notes']
 
 
 " Vimwiki
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/vim-wiki'}]
+"let g:vimwiki_list = [{'path': '$HOME/Dropbox/vim-wiki'}]
+let g:vimwiki_list = [{'path': '$HOME/Dropbox/vimwiki-md',
+                        \ 'syntax': 'markdown', 'ext': '.md'}]
+ 
