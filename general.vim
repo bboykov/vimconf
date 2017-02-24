@@ -105,4 +105,9 @@ set foldlevelstart=20
 " Set spelling
 "set spell spelllang=en_us
 
-
+" https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions
+augroup AutoSaveFolds
+  autocmd!
+  autocmd BufWinLeave ?* mkview
+  autocmd BufWinEnter ?* silent loadview
+augroup END
