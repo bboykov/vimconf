@@ -63,6 +63,8 @@ Plugin 'plasticboy/vim-markdown'
 " Snippets
 Plugin 'honza/vim-snippets'
 
+" https://github.com/mzlogin/vim-markdown-toc
+Plugin 'mzlogin/vim-markdown-toc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
