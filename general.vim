@@ -106,8 +106,9 @@ set foldlevelstart=20
 "set spell spelllang=en_us
 
 " https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions
+" http://stackoverflow.com/questions/2142402/code-folding-is-not-saved-in-my-vimrc
+" http://vim.wikia.com/wiki/Make_views_automatic
 augroup AutoSaveFolds
-  autocmd!
-  autocmd BufWinLeave ?* mkview
-  autocmd BufWinEnter ?* silent loadview
+  autocmd BufWinLeave .* mkview
+  autocmd BufWinEnter .* silent loadview
 augroup END
