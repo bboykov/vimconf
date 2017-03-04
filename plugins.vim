@@ -19,6 +19,18 @@ Plugin 'VundleVim/Vundle.vim'
 " Color theme molokai
 Plugin 'tomasr/molokai'
 
+" https://github.com/godlygeek/tabular
+" This plugin is prereq for plasticboy/vim-markdown
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+Plugin 'godlygeek/tabular'
+
+" Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
+" https://github.com/plasticboy/vim-markdown
+Plugin 'plasticboy/vim-markdown'
+
+" https://github.com/mzlogin/vim-markdown-toc
+Plugin 'mzlogin/vim-markdown-toc'
+
 " The NERD tree allows you to explore your filesystem and to open files and directories.
 Plugin 'scrooloose/nerdtree'
 
@@ -51,13 +63,6 @@ Plugin 'szw/vim-maximizer'
 
 " Comment stuff out.
 Plugin 'tpope/vim-commentary'
-
-" Syntax highlighting, matching rules and mappings for the original Markdown
-" and extensions.
-Plugin 'plasticboy/vim-markdown'
-
-" https://github.com/mzlogin/vim-markdown-toc
-Plugin 'mzlogin/vim-markdown-toc'
 
 
 
@@ -99,3 +104,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_sh_checkers=['shellcheck','sh','bashate'] 
 " Ansible
 let g:syntastic_ansible_checkers=['ansible-lint']
+
+" Markdown fenced code block languages. 
+" Settings from plasticboy/vim-markdown plugin
+let g:vim_markdown_fenced_languages = ['viml=vim', 'bash=sh', 'ansible=yml']
+let g:vim_markdown_new_list_item_indent = 2
