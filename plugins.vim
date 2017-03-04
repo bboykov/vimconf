@@ -71,17 +71,15 @@ Plugin 'tpope/vim-commentary'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
-" Settings
-
-colorscheme molokai
-
 " Column 80 marker
+" TODO: check for plugin
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#660000
 match OverLength /\%81v.\+/
 
-" Plugin NERDTree 
+ " set colorscheme from plugin
+colorscheme molokai
 
+" Plugin NERDTree 
 "autocmd vimenter * NERDTree " start vim with NERDTree open
 "" give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR> 

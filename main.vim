@@ -1,5 +1,5 @@
 " main
-source ~/vimconf/general.vim
-source ~/vimconf/workarounds.vim
-source ~/vimconf/commands.vim
-source ~/vimconf/plugins.vim
+source ~/vimconf/general.vim     " Mostly set
+source ~/vimconf/workarounds.vim " Unusual behavior
+source ~/vimconf/remappings.vim  " Key remappings
+source ~/vimconf/plugins.vim     " Manage plugins and plugin settings

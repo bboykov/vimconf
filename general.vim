@@ -1,39 +1,130 @@
-" settings
-
 " Behave like mswin
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-" Use Unix as the standard file type
-set fileformats=unix,dos,mac
-set fileformat=unix " Default format. Necessary under Windows!
+scriptencoding utf-8
 
-" start gVim maximized
-set lines=999 columns=999
+" Neovim has set these as default
+" https://github.com/neovim/neovim
+if !has('nvim')
+  set nocompatible
 
-" Enable syntax highlighting
-syntax enable
+  syntax on                      " Enable syntax highlighting
+  filetype plugin indent on      " Automatically detect file types
 
-" Indentation
-set autoindent
-filetype plugin indent on
+  set autoindent                 " Indentation
+  set autoread                   " Automatically read a file changed outside of vim
+  set backspace=indent,eol,start " Backspace for dummies
+  set complete-=i                " Exclude files completion
+  set display=lastline           " Show as much as possible of the last line
+  set encoding=utf-8             " Set default encoding
+  set history=10000              " Maximum history record
+  set hlsearch                   " Highlight search results
+  set incsearch                  " Find as you type search
+  set laststatus=2               " Always show status line
+  set mouse=a                    " Automatically enable mouse usage
+  set smartcase                  " When searching try to be smart about cases
+  set ttyfast                    " Faster redrawing
+  set viminfo+=!                 " Viminfo include !
+  set wildmenu                   " Show list instead of just completing
 
-" Use OS clipboard for copypasta
-set clipboard=unnamed
+  set ttymouse=xterm2
 
-" No swap files, use version control instead
-set noswapfile
+endif 
 
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set fileformats=unix,dos,mac " Use Unix as the standard file type
+set fileformat=unix          " Default format. Necessary under Windows!
+set background=dark          " Assume dark background
+set shortmess=atOI           " No help Uganda information, and overwrite read messages to avoid PRESS ENTER prompts
+set ignorecase               " Case sensitive search
+set smartcase                " Case sensitive when uc present
+set scrolljump=5             " Line to scroll when cursor leaves screen
+set scrolloff=3              " Minumum lines to keep above and below cursor
+set cursorline               " Highlight current line
+" Default tabs to 2 spaces
+" Ref and more settings here: http://tedlogan.com/techblog3.html
+set shiftwidth=2           " Determines the amount of whitespace to add in normal mode
+set softtabstop=2           " Fine tunes the amount of white space to be added
+set shiftwidth=2
+set expandtab                " When on uses space instead of tabs
+set splitright               " Puts new vsplit windows to the right of the current
+set splitbelow               " Puts new split windows to the bottom of the current
+set autowrite                " Automatically write a file when leaving a modified buffer
+set mousehide                " Hide the mouse cursor while typing
+set hidden                   " Allow buffer switching without saving
+set t_Co=256                 " Use 256 colors
+set ruler                    " Show the ruler
+set showcmd                  " Show partial commands in status line and Selected characters/lines in visual mode
+set showmode                 " Show current mode in command-line
+set showmatch                " Show matching brackets/parentthesis
+set matchtime=5              " Show matching time
+set report=0                 " Always report changed lines
+set linespace=0              " No extra spaces between rows
 set nobackup
-set nowb
+set noswapfile
+set nowritebackup
+" Folding
+set foldenable
+set foldmarker={,}
+set foldlevel=0
+set foldmethod=marker
+" set foldcolumn=3
+set foldlevelstart=99
 
-" Bash-style tab completion
-set wildmode=longest,list
-set wildmenu
+set relativenumber                   " Relative numbers on
+set number                           " Line numbers on
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+" highlight clear SignColumn           " SignColumn should match background
+" highlight clear LineNr             " Current line number row will have same background color in relative mode
 
-" Show line numbers
-set number
+
+
+" http://stackoverflow.com/questions/6427650/vim-in-tmux-background-color-changes-when-paging/15095377#15095377
+set t_ut=
+
+" Tab completion
+set winminheight=0
+set wildmode=list:longest,full
+" Old config. Bash-style tab completion
+" set wildmode=longest,list
+" set wildmenu
+
+set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+
+set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundaries
+
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+
+set wildignore+=*swp,*.class,*.pyc,*.png,*.jpg,*.gif,*.zip
+set wildignore+=*/tmp/*,*.o,*.obj,*.so     " Unix
+set wildignore+=*\\tmp\\*,*.exe            " Windows
+
+if has('unnamedplus')
+  set clipboard=unnamedplus,unnamed
+else
+  set clipboard+=unnamed
+endif
+
+if has('persistent_undo')
+  set undofile             " Persistent undo
+  set undolevels=1000      " Maximum number of changes that can be undone
+  set undoreload=10000     " Maximum number lines to save for undo on a buffer reload
+endif
+
+if has('gui_running')
+  set lines=999 columns=999 " start gVim maximized
+  set guioptions-=r         " Hide the right scrollbar
+  set guioptions-=L         " Hide the left scrollbar
+  set guioptions-=T         " Hide the toolbar
+  set guioptions-=e         " Add tab pages when indicated with 'showtabline'
+  set shortmess+=c
+  " No annoying sound on errors
+  set noerrorbells
+  set novisualbell
+  set visualbell t_vb=
+endif
 
 " Setup Font
 if has("gui_running")
@@ -46,69 +137,4 @@ if has("gui_running")
   endif
 endif
 
-" Show statusline
-set laststatus=2
 
-" Match and search
-set ignorecase " Case-insensitive search
-set hlsearch " Highlight search results
-set smartcase " When searching try to be smart about cases 
-
-"Always show current position
-set ruler
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" Number of things to remember in history.
-set history=256 
-
-" When a file has been detected to have been changed outside of Vim and
-" it has not been changed inside of Vim, automatically read it again.
-set autoread
-
-" Default tabs to 2 spaces
-" Ref and more settings here: http://tedlogan.com/techblog3.html
-" softtabstop:      Fine tunes the amount of white space to be added
-" shiftwidth        Determines the amount of whitespace to add in normal mode
-" expandtab:        When on uses space instead of tabs
-set softtabstop =2
-set shiftwidth  =2
-set expandtab
-" Except for Makefiles: Hard tabs of width 2
-autocmd FileType make set ts=2
-" And Markdown
-autocmd FileType mkd set sw=4
-autocmd FileType mkd set sts=4
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.cql set filetype=cql
-" And Java
-autocmd FileType java set sw=2
-
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-
-
-" Folding
-set foldmethod=syntax
-set foldcolumn=1
-set foldlevelstart=20
-
-" Set spelling
-"set spell spelllang=en_us
-
-" https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions
-" http://stackoverflow.com/questions/2142402/code-folding-is-not-saved-in-my-vimrc
-" http://vim.wikia.com/wiki/Make_views_automatic
-augroup AutoSaveFolds
-  autocmd BufWinLeave .* mkview
-  autocmd BufWinEnter .* silent loadview
-augroup END
