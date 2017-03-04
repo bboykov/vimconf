@@ -25,6 +25,9 @@ Plugin 'scrooloose/nerdtree'
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
 
+" Snippets
+Plugin 'honza/vim-snippets'
+
 " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree. 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
@@ -49,22 +52,15 @@ Plugin 'szw/vim-maximizer'
 " Comment stuff out.
 Plugin 'tpope/vim-commentary'
 
-" Vimwiki
-Plugin 'vimwiki/vimwiki'
-
-" The vim-notes plug-in makes it easy to manage your notes
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
-
 " Syntax highlighting, matching rules and mappings for the original Markdown
 " and extensions.
 Plugin 'plasticboy/vim-markdown'
 
-" Snippets
-Plugin 'honza/vim-snippets'
-
 " https://github.com/mzlogin/vim-markdown-toc
 Plugin 'mzlogin/vim-markdown-toc'
+
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -103,13 +99,3 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_sh_checkers=['shellcheck','sh','bashate'] 
 " Ansible
 let g:syntastic_ansible_checkers=['ansible-lint']
-
-" vim-notes plugin
-let g:notes_directories = ['~/Dropbox/vim-notes']
-
-
-" Vimwiki
-"let g:vimwiki_list = [{'path': '$HOME/Dropbox/vim-wiki'}]
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/vimwiki-md',
-                        \ 'syntax': 'markdown', 'ext': '.md'}]
- 
