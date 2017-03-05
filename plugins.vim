@@ -64,8 +64,8 @@ Plugin 'szw/vim-maximizer'
 " Comment stuff out.
 Plugin 'tpope/vim-commentary'
 
-
-
+" https://github.com/freitass/todo.txt-vim
+Plugin 'freitass/todo.txt-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
