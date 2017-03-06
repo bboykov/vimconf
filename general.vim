@@ -137,4 +137,10 @@ if has("gui_running")
   endif
 endif
 
+" Highlight column 80 as well as 120 and onward
+" http://stackoverflow.com/questions/2447109/showing-a-different-background-colour-in-vim-past-80-characters
+" highlight ColorColumn ctermbg=235 guibg=#2c2d27
+" let &colorcolumn=join(range(81,999),",")
+let &colorcolumn="80,".join(range(120,999),",")
+
 

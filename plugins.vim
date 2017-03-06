@@ -71,12 +71,7 @@ Plugin 'freitass/todo.txt-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Column 80 marker
-" TODO: check for plugin
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#660000
-match OverLength /\%81v.\+/
-
- " set colorscheme from plugin
+" set colorscheme from plugin
 colorscheme molokai
 
 " Plugin NERDTree 
