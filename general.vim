@@ -63,6 +63,8 @@ set linespace=0              " No extra spaces between rows
 set nobackup
 set noswapfile
 set nowritebackup
+" Show hidden characters in Vim
+set list
 " Folding
 set foldenable
 set foldmarker={,}
