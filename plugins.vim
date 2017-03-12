@@ -132,5 +132,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 """ CtrlP config {
 
 let g:ctrlp_working_path_mode = 'ra'
+" https://coderwall.com/p/5xv7sq/ctrlp-root-markers
+let g:ctrlp_root_markers = ['.ctrlp']
 
 """ }
