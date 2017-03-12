@@ -48,6 +48,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
 
+" A Vim plugin which shows a git diff in the 'gutter' (sign column)
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+
 " Snippets
 " Plugin 'honza/vim-snippets'
 
