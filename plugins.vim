@@ -50,10 +50,15 @@ Plugin 'tpope/vim-fugitive'
 
 " A Vim plugin which shows a git diff in the 'gutter' (sign column)
 " https://github.com/airblade/vim-gitgutter
-Plug 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 
 " Snippets
 " Plugin 'honza/vim-snippets'
+
+" Indent Guides is a plugin for visually displaying indent levels in Vim.
+" https://github.com/nathanaelkane/vim-indent-guides
+Plugin 'nathanaelkane/vim-indent-guides'
+
 
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline'

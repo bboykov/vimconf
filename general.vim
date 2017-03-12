@@ -89,7 +89,8 @@ set wildmode=list:longest,full
 " set wildmode=longest,list
 " set wildmenu
 
-set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+nmap <leader>l :set list!<CR>
+set listchars=tab:→\ ,eol:↵,trail:▢,extends:↷,precedes:↶
 
 set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundaries
 
