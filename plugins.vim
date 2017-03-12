@@ -17,8 +17,8 @@ endif
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Color theme molokai
-Plugin 'tomasr/molokai'
+" https://github.com/flazz/vim-colorschemes
+Plugin 'flazz/vim-colorschemes'
 
 " https://github.com/godlygeek/tabular
 " This plugin is prereq for plasticboy/vim-markdown
@@ -31,6 +31,9 @@ Plugin 'plasticboy/vim-markdown'
 
 " https://github.com/mzlogin/vim-markdown-toc
 Plugin 'mzlogin/vim-markdown-toc'
+
+" https://github.com/scrooloose/nerdcommenter
+Plugin 'scrooloose/nerdcommenter'
 
 " The NERD tree allows you to explore your filesystem and to open files and directories.
 Plugin 'scrooloose/nerdtree'
@@ -66,9 +69,6 @@ Plugin 'pearofducks/ansible-vim'
 " Maximizes and restores the current window in Vim.
 " Plugin 'szw/vim-maximizer'
 
-" Comment stuff out.
-Plugin 'tpope/vim-commentary'
-
 " https://github.com/freitass/todo.txt-vim
 Plugin 'freitass/todo.txt-vim'
 
@@ -81,7 +81,7 @@ filetype plugin indent on    " required
 
 """ }
 
-""" Set colorscheme from plugin {
+""" Set colorscheme from vim-colorscheme plugin {
 
 colorscheme molokai
 
@@ -134,5 +134,15 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:ctrlp_working_path_mode = 'ra'
 " https://coderwall.com/p/5xv7sq/ctrlp-root-markers
 let g:ctrlp_root_markers = ['.ctrlp']
+
+""" }
+
+""" NERD Commenter {
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
 """ }
