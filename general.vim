@@ -155,3 +155,9 @@ let &colorcolumn="80,".join(range(120,999),",")
 "   endif
 " endif
 " }
+
+""" `gx` to opening url in gvim, mvim, terminal vim {
+
+let g:netrw_browsex_viewer="google"
+
+""" }
