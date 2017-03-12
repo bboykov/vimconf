@@ -30,7 +30,7 @@ if !has('nvim')
 
   set ttymouse=xterm2
 
-endif 
+endif
 
 set fileformats=unix,dos,mac " Use Unix as the standard file type
 set fileformat=unix          " Default format. Necessary under Windows!
