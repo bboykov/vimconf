@@ -1,6 +1,6 @@
 " Behave like mswin
-source $VIMRUNTIME/mswin.vim
-behave mswin
+" source $VIMRUNTIME/mswin.vim
+" behave mswin
 
 scriptencoding utf-8
 
