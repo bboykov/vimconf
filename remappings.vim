@@ -1,16 +1,21 @@
+""" Visual shifting  {
 " Visual shifting (does not exit Visual mode). Keeps the selection in place
 vnoremap < <gv
 vnoremap > >gv
+""" }
 
+""" Break lines {
 " Treat long lines as break lines (useful when moving around in them)
 nmap j gj
 nmap k gk
 vmap j gj
 vmap k gk
+""" }
 
-" :W sudo saves the file
+""" :W sudo saves the file {
 " (useful for handling the permission-denied error)
 command! W w !sudo tee % > /dev/null
+""" }
 
 " Change cursor shape for iTerm2 on macOS {
   " bar in Insert mode
@@ -30,7 +35,7 @@ command! W w !sudo tee % > /dev/null
 " }
 
 " Key (re)Mappings {
-" Quit normal mode
+"" Quit normal mode
 nnoremap <Leader>q  :q<CR>
 nnoremap <Leader>Q  :qa!<CR>
 nnoremap <Leader>x  :x<CR>
@@ -45,12 +50,13 @@ nnoremap U <C-r>
 nnoremap ; :
 " Yank to the end of line
 nnoremap Y y$
-" Windows manipulation
+
+"""" Windows manipulation {
 " https://github.com/liuchengxu/vim-better-default/wiki/A-brief-introduction-to-key-bindins
 nnoremap <Leader>ww <C-W>w
 " Swap window
-nnoremap <Leader>wr <C-W>r 
-" delete-window 
+nnoremap <Leader>wr <C-W>r
+" delete-window
 nnoremap <Leader>wd <C-W>c
 nnoremap <Leader>wq <C-W>q
 " window-down
@@ -77,31 +83,34 @@ nnoremap <Leader>wv <C-W>v
 nnoremap <Leader>w\| <C-W>v
 " layout-double-columns
 nnoremap <Leader>w2 <C-W>v
-" Easier split navigations
+"""" }
+
+"""" Easier split navigations {
 " https://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 " instead of ctrl-w then j, it’s just ctrl-j
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" }
+"""" }
+""" }
 
-
-
-" Automatically change the current directory
+""" Automatically change the current directory {
 " http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
 autocmd BufEnter * silent! lcd %:p:h
+""" }
 
+""" AutoSaveFolds {
+" " https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions
+" " http://stackoverflow.com/questions/2142402/code-folding-is-not-saved-in-my-vimrc
+" " http://vim.wikia.com/wiki/Make_views_automatic
+" augroup AutoSaveFolds
+"   autocmd BufWinLeave .* mkview
+"   autocmd BufWinEnter .* silent loadview
+" augroup END
+""" }
 
-" https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions
-" http://stackoverflow.com/questions/2142402/code-folding-is-not-saved-in-my-vimrc
-" http://vim.wikia.com/wiki/Make_views_automatic
-augroup AutoSaveFolds
-  autocmd BufWinLeave .* mkview
-  autocmd BufWinEnter .* silent loadview
-augroup END
-
-
+""" Static and Relative Numbers {
 autocmd InsertEnter * :set number norelativenumber  " Static numbers in insert mode
 autocmd InsertLeave * :set nonumber relativenumber  " Relative numbers in normal mode
-" }
+""" }

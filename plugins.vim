@@ -32,8 +32,9 @@ Plugin 'plasticboy/vim-markdown'
 " https://github.com/mzlogin/vim-markdown-toc
 Plugin 'mzlogin/vim-markdown-toc'
 
-" https://github.com/scrooloose/nerdcommenter
-Plugin 'scrooloose/nerdcommenter'
+" Comment stuff out. Use gcc to comment out a line
+" https://github.com/tpope/vim-commentary
+Plugin 'tpope/vim-commentary'
 
 " The NERD tree allows you to explore your filesystem and to open files and directories.
 Plugin 'scrooloose/nerdtree'
@@ -59,7 +60,6 @@ Plugin 'airblade/vim-gitgutter'
 " https://github.com/nathanaelkane/vim-indent-guides
 Plugin 'nathanaelkane/vim-indent-guides'
 
-
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -68,9 +68,14 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
 
 " parentheses, brackets, quotes, XML tags, and more
+" http://www.futurile.net/2016/03/19/vim-surround-plugin-tutorial/
 Plugin 'tpope/vim-surround'
 " Ansible-lint (from the repo @System on Fedora)
 " https://github.com/willthames/ansible-lint
+
+" Repeat.vim remaps . in a way that plugins can tap into it.
+" https://github.com/tpope/vim-repeat
+Plugin 'tpope/vim-repeat'
 
 " A vim plugin for syntax highlighting Ansible's common filetypes
 Plugin 'pearofducks/ansible-vim'
@@ -83,6 +88,12 @@ Plugin 'freitass/todo.txt-vim'
 
 " http://vimawesome.com/plugin/supertab
 Plugin 'ervandew/supertab'
+
+" https://github.com/hashivim/vim-terraform
+Plugin 'hashivim/vim-terraform'
+
+" https://github.com/ntpeters/vim-better-whitespace
+Plugin 'ntpeters/vim-better-whitespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -119,9 +130,9 @@ let g:syntastic_check_on_wq = 0
 " Install checkers:with
 " pip install bashate
 " Fedora: yum install ShellCheck
-let g:syntastic_sh_checkers=['shellcheck','sh','bashate']
+" let g:syntastic_sh_checkers=['shellcheck','sh','bashate']
 " Ansible
-let g:syntastic_ansible_checkers=['ansible-lint']
+" let g:syntastic_ansible_checkers=['ansible-lint']
 
 """ }
 
@@ -146,12 +157,8 @@ let g:ctrlp_root_markers = ['.ctrlp']
 
 """ }
 
-""" NERD Commenter {
+""" vim-terraform {
 
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
+let g:terraform_align=1
 
 """ }

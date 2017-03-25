@@ -63,7 +63,7 @@ set linespace=0              " No extra spaces between rows
 set nobackup
 set noswapfile
 set nowritebackup
-" Show hidden characters in Vim
+" show hidden characters in Vim
 set list
 " Folding
 set foldenable
@@ -110,12 +110,15 @@ else
   set clipboard+=unnamed
 endif
 
+""" persistent_undo {
 if has('persistent_undo')
   set undofile             " Persistent undo
   set undolevels=1000      " Maximum number of changes that can be undone
   set undoreload=10000     " Maximum number lines to save for undo on a buffer reload
 endif
+""" }
 
+""" GUI settings {
 if has('gui_running')
   set lines=999 columns=999 " start gVim maximized
   set guioptions-=r         " Hide the right scrollbar
@@ -128,8 +131,9 @@ if has('gui_running')
   set novisualbell
   set visualbell t_vb=
 endif
+""" }
 
-" Setup Font
+""" Setup Font {
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -139,14 +143,16 @@ if has("gui_running")
     set guifont=Consolas:h14:cANSI
   endif
 endif
+""" }
 
-" Highlight column 80 as well as 120 and onward
+""" Highlight column 80 as well as 120 and onward {
 " http://stackoverflow.com/questions/2447109/showing-a-different-background-colour-in-vim-past-80-characters
 " highlight ColorColumn ctermbg=235 guibg=#2c2d27
 " let &colorcolumn=join(range(81,999),",")
 let &colorcolumn="80,".join(range(120,999),",")
+""" }
 
-" Workarounds {
+""" Workarounds {
 " Issue - Can't open file C:\Users\<userid>\AppData\Local\Temp\... Error
 " https://github.com/VundleVim/Vundle.vim/issues/575
 " http://stackoverflow.com/questions/10612362/setting-up-gvim-on-windows/10622083#10622083
@@ -156,10 +162,11 @@ let &colorcolumn="80,".join(range(120,999),",")
 "     set shell=$COMSPEC " sets shell to correct path for cmd.exe
 "   endif
 " endif
-" }
+""" }
 
 """ `gx` to opening url in gvim, mvim, terminal vim {
 
 let g:netrw_browsex_viewer="google"
 
 """ }
+
