@@ -111,7 +111,17 @@ else
 endif
 
 """ persistent_undo {
+" Put plugins and dictionaries in this dir
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
+  let myUndoDir = expand(vimDir . '/undodir')
+  " Create dirs
+  call system('mkdir ' . vimDir)
+  call system('mkdir ' . myUndoDir)
+  let &undodir = myUndoDir
   set undofile             " Persistent undo
   set undolevels=1000      " Maximum number of changes that can be undone
   set undoreload=10000     " Maximum number lines to save for undo on a buffer reload

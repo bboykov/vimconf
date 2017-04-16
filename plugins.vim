@@ -70,8 +70,6 @@ Plugin 'scrooloose/syntastic'
 " parentheses, brackets, quotes, XML tags, and more
 " http://www.futurile.net/2016/03/19/vim-surround-plugin-tutorial/
 Plugin 'tpope/vim-surround'
-" Ansible-lint (from the repo @System on Fedora)
-" https://github.com/willthames/ansible-lint
 
 " Repeat.vim remaps . in a way that plugins can tap into it.
 " https://github.com/tpope/vim-repeat
@@ -103,7 +101,7 @@ filetype plugin indent on    " required
 
 """ Set colorscheme from vim-colorscheme plugin {
 
-colorscheme molokai
+silent! colorscheme molokai
 
 """ }
 
@@ -132,7 +130,7 @@ let g:syntastic_check_on_wq = 0
 " Fedora: yum install ShellCheck
 " let g:syntastic_sh_checkers=['shellcheck','sh','bashate']
 " Ansible
-" let g:syntastic_ansible_checkers=['ansible-lint']
+let g:syntastic_ansible_checkers=['ansible-lint']
 
 """ }
 
@@ -171,3 +169,7 @@ autocmd FileType terraform setlocal commentstring=#\ %s
 
 """ }
 
+""" pearofducks/ansible-vim {
+let g:ansible_unindent_after_newline = 1
+
+""" }
