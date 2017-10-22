@@ -4,6 +4,12 @@ vnoremap < <gv
 vnoremap > >gv
 """ }
 
+"""
+" Yank a region in VIM without the cursor moving to the top of the block
+" https://stackoverflow.com/questions/3806629/yank-a-region-in-vim-without-the-cursor-moving-to-the-top-of-the-block
+vmap y ygv<Esc>
+
+""" }
 """ Break lines {
 " Treat long lines as break lines (useful when moving around in them)
 nmap j gj
