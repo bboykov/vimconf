@@ -32,6 +32,9 @@ Plugin 'plasticboy/vim-markdown'
 " https://github.com/mzlogin/vim-markdown-toc
 Plugin 'mzlogin/vim-markdown-toc'
 
+" https://github.com/jamshedvesuna/vim-markdown-preview
+Plugin 'jamshedvesuna/vim-markdown-preview'
+
 " Comment stuff out. Use gcc to comment out a line
 " https://github.com/tpope/vim-commentary
 Plugin 'tpope/vim-commentary'
@@ -93,6 +96,9 @@ Plugin 'hashivim/vim-terraform'
 " https://github.com/ntpeters/vim-better-whitespace
 Plugin 'ntpeters/vim-better-whitespace'
 
+" https://github.com/vim-scripts/confluencewiki.vim
+Plugin 'confluencewiki.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -124,11 +130,14 @@ let g:syntastic_check_on_wq = 0
 " }
 
 """ syntastic configuration {
+" let g:syntastic_sh_checkers=['shellcheck','sh','bashate']
 " Bash
 " Install checkers:with
 " pip install bashate
+" ShellCheck: https://github.com/koalaman/shellcheck
 " Fedora: yum install ShellCheck
-" let g:syntastic_sh_checkers=['shellcheck','sh','bashate']
+" Mac: brew install shellcheck
+let g:syntastic_sh_checkers=['shellcheck']
 " Ansible
 let g:syntastic_ansible_checkers=['ansible-lint']
 
@@ -139,6 +148,17 @@ let g:syntastic_ansible_checkers=['ansible-lint']
 " Settings from plasticboy/vim-markdown plugin
 let g:vim_markdown_fenced_languages = ['viml=vim', 'bash=sh', 'ansible=yml']
 let g:vim_markdown_new_list_item_indent = 2
+""" }
+
+""" vim-markdown-preview plugin {
+" Change default brawser
+let vim_markdown_preview_browser='Google Chrome'
+" Remove the rendered preview
+let vim_markdown_preview_temp_file=1
+" GitHub flavoured markdown you need to install Python grip `pip install grip`
+let vim_markdown_preview_github=1
+" Mapping Control M
+let vim_markdown_preview_hotkey='<C-m>'
 """ }
 
 """ SuperTab configuration {
