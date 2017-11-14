@@ -73,7 +73,7 @@ set foldmethod=marker
 " set foldcolumn=3
 set foldlevelstart=99
 
-set relativenumber                   " Relative numbers on
+" set relativenumber                   " Relative numbers on
 set number                           " Line numbers on
 set fillchars=vert:\ ,stl:\ ,stlnc:\
 " highlight clear SignColumn           " SignColumn should match background
