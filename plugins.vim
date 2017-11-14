@@ -17,9 +17,6 @@ endif
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" https://github.com/flazz/vim-colorschemes
-Plugin 'flazz/vim-colorschemes'
-
 " https://github.com/godlygeek/tabular
 " This plugin is prereq for plasticboy/vim-markdown
 " http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
@@ -99,15 +96,25 @@ Plugin 'ntpeters/vim-better-whitespace'
 " https://github.com/vim-scripts/confluencewiki.vim
 Plugin 'confluencewiki.vim'
 
+" https://github.com/chriskempson/base16-vim
+Plugin 'chriskempson/base16-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 """ }
 
-""" Set colorscheme from vim-colorscheme plugin {
+let base16colorspace=256
+silent! colorscheme base16-default-dark
+" Base16 Colors
+" https://github.com/chriskempson/base16-shell
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
-silent! colorscheme molokai
+
 
 """ }
 
