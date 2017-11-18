@@ -4,6 +4,10 @@ vnoremap < <gv
 vnoremap > >gv
 """ }
 
+""" Blockwise visual block {
+nnoremap <Leader>v <c-v>
+" }
+
 """
 " Yank a region in VIM without the cursor moving to the top of the block
 " https://stackoverflow.com/questions/3806629/yank-a-region-in-vim-without-the-cursor-moving-to-the-top-of-the-block
@@ -117,6 +121,6 @@ autocmd BufEnter * silent! lcd %:p:h
 """ }
 
 """ Static and Relative Numbers {
-autocmd InsertEnter * :set number norelativenumber  " Static numbers in insert mode
-autocmd InsertLeave * :set nonumber relativenumber  " Relative numbers in normal mode
+" autocmd InsertEnter * :set number norelativenumber  " Static numbers in insert mode
+" autocmd InsertLeave * :set nonumber relativenumber  " Relative numbers in normal mode
 """ }

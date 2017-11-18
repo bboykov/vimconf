@@ -136,12 +136,14 @@ if has('gui_running')
   set guioptions-=T         " Hide the toolbar
   set guioptions-=e         " Add tab pages when indicated with 'showtabline'
   set shortmess+=c
-  " No annoying sound on errors
-  set noerrorbells
-  set novisualbell
-  set visualbell t_vb=
 endif
 """ }
+
+""" No annoying sound on errors {
+set noerrorbells
+set visualbell
+set visualbell t_vb=
+" }
 
 """ Setup Font {
 if has("gui_running")
