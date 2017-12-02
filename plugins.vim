@@ -96,6 +96,10 @@ Plugin 'ntpeters/vim-better-whitespace'
 " https://github.com/vim-scripts/confluencewiki.vim
 Plugin 'confluencewiki.vim'
 
+" https://github.com/flazz/vim-colorschemes
+Plugin 'flazz/vim-colorschemes'
+
+" Base16 color themes
 " https://github.com/chriskempson/base16-vim
 Plugin 'chriskempson/base16-vim'
 
@@ -105,8 +109,7 @@ filetype plugin indent on    " required
 
 """ }
 
-let base16colorspace=256
-silent! colorscheme base16-default-dark
+silent! colorscheme molokai
 " Base16 Colors
 " https://github.com/chriskempson/base16-shell
 if filereadable(expand("~/.vimrc_background"))
