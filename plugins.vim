@@ -161,7 +161,7 @@ let g:vim_markdown_new_list_item_indent = 2
 """ }
 
 """ vim-markdown-preview plugin {
-" Change default brawser
+" Change default browser
 let vim_markdown_preview_browser='Google Chrome'
 " Remove the rendered preview
 let vim_markdown_preview_temp_file=1
