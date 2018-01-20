@@ -109,6 +109,9 @@ Plugin 'tmux-plugins/vim-tmux'
 " https://github.com/tmux-plugins/vim-tmux-focus-events
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 
+" https://github.com/tpope/vim-obsession
+Plugin 'tpope/vim-obsession'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
