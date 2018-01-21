@@ -17,6 +17,12 @@ endif
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" todo.txt plugin for VIM
+" https://github.com/todotxt/todo.txt-cli
+" https://github.com/todotxt/todo.txt-cli/blob/master/USAGE.md
+" https://github.com/freitass/todo.txt-vim
+Plugin 'freitass/todo.txt-vim'
+
 " https://github.com/godlygeek/tabular
 " This plugin is prereq for plasticboy/vim-markdown
 " http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
@@ -80,9 +86,6 @@ Plugin 'pearofducks/ansible-vim'
 
 " Maximizes and restores the current window in Vim.
 " Plugin 'szw/vim-maximizer'
-
-" https://github.com/freitass/todo.txt-vim
-Plugin 'freitass/todo.txt-vim'
 
 " http://vimawesome.com/plugin/supertab
 Plugin 'ervandew/supertab'
